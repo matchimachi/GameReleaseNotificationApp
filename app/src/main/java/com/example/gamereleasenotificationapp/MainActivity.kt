@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // 配列の生成
-        val array = arrayOf((R.string.company_name1).toString(), (R.string.company_name2).toString(), (R.string.company_name3).toString(), (R.string.company_name4).toString(), (R.string.company_name5).toString())
+        val array = arrayOf(getString(R.string.company_name1), getString(R.string.company_name2), getString(R.string.company_name3), getString(R.string.company_name4), getString(R.string.company_name5))
 
         // xmlにて実装したListViewの取得
         val listView = findViewById<ListView>(R.id.list_view)
