@@ -12,14 +12,8 @@ import android.widget.ListView
 
 class GameCompanyListFragment : Fragment() {
 
-    private var columnCount = 2
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        arguments?.let {
-            columnCount = it.getInt(ARG_COLUMN_COUNT)
-        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -44,14 +38,12 @@ class GameCompanyListFragment : Fragment() {
 
         // 項目をタップしたときの処理
         listView?.setOnItemClickListener { parent, view, position, id ->
-            // 色
-            Log.i("NewItemFragment", "わあああああ")
-//            Log.d(TAG, "toSecondButton pressed!")
-//            val secondFragment = SecondFragment()
-//            val fragmentTransaction = fragmentManager?.beginTransaction()
-//            fragmentTransaction?.addToBackStack(null)
-//            fragmentTransaction?.replace(R.id.fragment_container, secondFragment)
-//            fragmentTransaction?.commit()
+            Log.i("NewItemFragment", "ゲーム一覧へ遷移")
+            val gamelistFragment = GameListFragment()
+            val fragmentTransaction = fragmentManager?.beginTransaction()
+            fragmentTransaction?.addToBackStack(null)
+            fragmentTransaction?.replace(R.id.main_fragment, gamelistFragment)
+            fragmentTransaction?.commit()
         }
     }
 
@@ -61,20 +53,5 @@ class GameCompanyListFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_game_company_list_view, container, false)
         return view
-    }
-
-    companion object {
-
-        // TODO: Customize parameter argument names
-        const val ARG_COLUMN_COUNT = "column-count"
-
-        // TODO: Customize parameter initialization
-        @JvmStatic
-        fun newInstance(columnCount: Int) =
-            GameCompanyListFragment().apply {
-                arguments = Bundle().apply {
-                    putInt(ARG_COLUMN_COUNT, columnCount)
-                }
-            }
     }
 }
