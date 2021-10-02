@@ -10,9 +10,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // ListView表示用のフラグメントをセット
-        val gamelistFragment = GameListFragment()
+        val gamecompanylistFragment = GameCompanyListFragment()
         val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.main_fragment, gamelistFragment)
+        transaction.replace(R.id.main_fragment, gamecompanylistFragment)
         transaction.commit()
     }
 }
