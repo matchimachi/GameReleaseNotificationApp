@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 
 
-class GameListFragment : Fragment() {
+class GameCompanyListFragment : Fragment() {
 
     private var columnCount = 2
 
@@ -46,6 +46,12 @@ class GameListFragment : Fragment() {
         listView?.setOnItemClickListener { parent, view, position, id ->
             // 色
             Log.i("NewItemFragment", "わあああああ")
+//            Log.d(TAG, "toSecondButton pressed!")
+//            val secondFragment = SecondFragment()
+//            val fragmentTransaction = fragmentManager?.beginTransaction()
+//            fragmentTransaction?.addToBackStack(null)
+//            fragmentTransaction?.replace(R.id.fragment_container, secondFragment)
+//            fragmentTransaction?.commit()
         }
     }
 
@@ -65,7 +71,7 @@ class GameListFragment : Fragment() {
         // TODO: Customize parameter initialization
         @JvmStatic
         fun newInstance(columnCount: Int) =
-            GameListFragment().apply {
+            GameCompanyListFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_COLUMN_COUNT, columnCount)
                 }
