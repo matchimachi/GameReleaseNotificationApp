@@ -2,12 +2,11 @@ package com.example.gamereleasenotificationapp
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 
 import com.example.gamereleasenotificationapp.placeholder.PlaceholderContent.PlaceholderItem
-import com.example.gamereleasenotificationapp.databinding.FragmentGameListBinding
+import com.example.gamereleasenotificationapp.databinding.FragmentGameCompanyListBinding
 
 /**
  * [RecyclerView.Adapter] that can display a [PlaceholderItem].
@@ -20,7 +19,7 @@ class MyItemRecyclerViewAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
         return ViewHolder(
-            FragmentGameListBinding.inflate(
+            FragmentGameCompanyListBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
@@ -37,7 +36,7 @@ class MyItemRecyclerViewAdapter(
 
     override fun getItemCount(): Int = values.size
 
-    inner class ViewHolder(binding: FragmentGameListBinding) :
+    inner class ViewHolder(binding: FragmentGameCompanyListBinding) :
         RecyclerView.ViewHolder(binding.root) {
         val idView: TextView = binding.itemNumber
         val contentView: TextView = binding.content
