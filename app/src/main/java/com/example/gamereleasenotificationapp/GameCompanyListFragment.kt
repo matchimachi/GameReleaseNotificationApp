@@ -53,7 +53,7 @@ class GameListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_game_list_view, container, false)
+        val view = inflater.inflate(R.layout.fragment_game_company_list_view, container, false)
         return view
     }
 
