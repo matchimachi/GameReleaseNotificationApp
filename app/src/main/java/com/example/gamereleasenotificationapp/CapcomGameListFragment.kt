@@ -1,7 +1,6 @@
 package com.example.gamereleasenotificationapp
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +9,7 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 
 
-class GameCompanyListFragment : Fragment() {
+class CapcomGameListFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,16 +18,8 @@ class GameCompanyListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         // 配列の生成
         val array = arrayOf(
-            getString(R.string.company_name1),
-            getString(R.string.company_name2),
-            getString(R.string.company_name3),
-            getString(R.string.company_name4),
-            getString(R.string.company_name5)
-        )
-
-        val companyFragmentArray = arrayOf(
-            CapcomGameListFragment(),
-            SquGameListFragment()
+            getString(R.string.game_name1),
+            getString(R.string.game_name2)
         )
 
         // xmlにて実装したListViewの取得
@@ -42,21 +33,21 @@ class GameCompanyListFragment : Fragment() {
         listView?.adapter = adapter
 
         // 項目をタップしたときの処理
-        listView?.setOnItemClickListener { parent, view, position, id ->
-            Log.i("NewItemFragment", "ゲーム一覧へ遷移")
-            val fragmentTransaction = fragmentManager?.beginTransaction()
-            val targetCompany = companyFragmentArray[position]
-            fragmentTransaction?.addToBackStack(null)
-            fragmentTransaction?.replace(R.id.main_fragment, targetCompany)
-            fragmentTransaction?.commit()
-        }
+//        listView?.setOnItemClickListener { parent, view, position, id ->
+//            Log.i("NewItemFragment", "ゲーム一覧へ遷移")
+//            val gamelistFragment = GameListFragment()
+//            val fragmentTransaction = fragmentManager?.beginTransaction()
+//            fragmentTransaction?.addToBackStack(null)
+//            fragmentTransaction?.replace(R.id.main_fragment, gamelistFragment)
+//            fragmentTransaction?.commit()
+//        }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_game_company_list_view, container, false)
+        val view = inflater.inflate(R.layout.fragment_capcom_game_list_view, container, false)
         return view
     }
 }

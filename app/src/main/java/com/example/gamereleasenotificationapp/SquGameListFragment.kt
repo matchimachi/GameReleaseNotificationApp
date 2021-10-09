@@ -13,7 +13,7 @@ import com.example.gamereleasenotificationapp.placeholder.PlaceholderContent
 /**
  * A fragment representing a list of Items.
  */
-class GameListFragment : Fragment() {
+class SquGameListFragment : Fragment() {
 
     private var columnCount = 2
 
@@ -29,7 +29,7 @@ class GameListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_game_list_view, container, false)
+        val view = inflater.inflate(R.layout.fragment_squ_game_list_view, container, false)
 
         // Set the adapter
         if (view is RecyclerView) {
@@ -38,7 +38,7 @@ class GameListFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = MyItemRecyclerViewAdapterGameList(PlaceholderContent.ITEMS)
+                adapter = MyItemRecyclerViewAdapterSquGameList(PlaceholderContent.ITEMS)
             }
         }
         return view
@@ -52,7 +52,7 @@ class GameListFragment : Fragment() {
         // TODO: Customize parameter initialization
         @JvmStatic
         fun newInstance(columnCount: Int) =
-            GameListFragment().apply {
+            SquGameListFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_COLUMN_COUNT, columnCount)
                 }
