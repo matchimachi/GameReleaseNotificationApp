@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 
 
-class GameListFragment : Fragment() {
+class CapcomGameListFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

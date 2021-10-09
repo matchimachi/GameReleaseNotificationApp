@@ -26,6 +26,11 @@ class GameCompanyListFragment : Fragment() {
             getString(R.string.company_name5)
         )
 
+        val companyFragmentArray = arrayOf(
+            CapcomGameListFragment(),
+            SquGameListFragment()
+        )
+
         // xmlにて実装したListViewの取得
         val listView = view?.findViewById<ListView>(R.id.list_view)
 
@@ -39,10 +44,10 @@ class GameCompanyListFragment : Fragment() {
         // 項目をタップしたときの処理
         listView?.setOnItemClickListener { parent, view, position, id ->
             Log.i("NewItemFragment", "ゲーム一覧へ遷移")
-            val gamelistFragment = GameListFragment()
             val fragmentTransaction = fragmentManager?.beginTransaction()
+            val targetCompany = companyFragmentArray[position]
             fragmentTransaction?.addToBackStack(null)
-            fragmentTransaction?.replace(R.id.main_fragment, gamelistFragment)
+            fragmentTransaction?.replace(R.id.main_fragment, targetCompany)
             fragmentTransaction?.commit()
         }
     }
