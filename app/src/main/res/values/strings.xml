@@ -5,4 +5,6 @@
     <string name="company_name3">任天堂</string>
     <string name="company_name4">UBISOFT</string>
     <string name="company_name5">cd projekt red</string>
+    <string name="game_name1">モンスターハンター</string>
+    <string name="game_name2">バイオハザード</string>
 </resources>

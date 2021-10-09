@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/matis/AppData/Local/Android/Sdk/platforms/android-30/data/res/layout/simple_list_item_1.xml" value="0.19610507246376813" />
         <entry key="..\:/Users/work/machi/app/src/main/res/layout/activity_main.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/work/machi/app/src/main/res/layout/fragment_capcom_game_list.xml" value="0.2171875" />
+        <entry key="..\:/Users/work/machi/app/src/main/res/layout/fragment_capcom_game_list_view.xml" value="0.2171875" />
         <entry key="..\:/Users/work/machi/app/src/main/res/layout/fragment_game_company_list.xml" value="0.19270833333333334" />
         <entry key="..\:/Users/work/machi/app/src/main/res/layout/fragment_game_company_list_view.xml" value="0.19270833333333334" />
         <entry key="..\:/Users/work/machi/app/src/main/res/layout/fragment_game_list.xml" value="0.21041666666666667" />
