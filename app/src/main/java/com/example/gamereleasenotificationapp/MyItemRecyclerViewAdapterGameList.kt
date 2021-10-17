@@ -9,16 +9,11 @@ import android.widget.TextView
 import com.example.gamereleasenotificationapp.placeholder.PlaceholderContent.PlaceholderItem
 import com.example.gamereleasenotificationapp.databinding.FragmentCapcomGameListBinding
 
-/**
- * [RecyclerView.Adapter] that can display a [PlaceholderItem].
- * TODO: Replace the implementation with code for your data type.
- */
 class MyItemRecyclerViewAdapterGameList(
     private val values: List<PlaceholderItem>
 ) : RecyclerView.Adapter<MyItemRecyclerViewAdapterGameList.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-
         return ViewHolder(
             FragmentCapcomGameListBinding.inflate(
                 LayoutInflater.from(parent.context),
@@ -26,7 +21,6 @@ class MyItemRecyclerViewAdapterGameList(
                 false
             )
         )
-
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -46,5 +40,4 @@ class MyItemRecyclerViewAdapterGameList(
             return super.toString() + " '" + contentView.text + "'"
         }
     }
-
 }
