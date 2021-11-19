@@ -1,5 +1,6 @@
 package com.example.gamereleasenotificationapp
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import android.content.DialogInterface
+import android.util.Log
 
 
 class CapcomGameListFragment : Fragment() {
@@ -31,6 +34,23 @@ class CapcomGameListFragment : Fragment() {
 
         // ListViewに、生成したAdapterを設定
         listView?.adapter = adapter
+
+
+        listView?.setOnItemClickListener { parent, view, position, id ->
+            Log.i("AlertDialog", "ダイアログ表示")
+            val items = arrayOf("ホームページ遷移", "Twitter遷移")
+            AlertDialog.Builder(requireContext())
+                .setItems(items) { dialog, which ->
+                    // The 'which' argument contains the index position
+                    // of the selected item
+                }
+
+                // 戻るの時は何もしない
+                .setNegativeButton("戻る") { dialog, which ->
+
+                }
+                .show()
+        }
 
 
     }
